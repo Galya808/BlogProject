@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+    
+    <div class="top-container">
+        <h1 class="header-text"> This site displays recent blogs </h1>
+
+        <% if(!locals.blogs.length) { %>
+            <h3>There is no blog yet!</h3>
+            <form action="/blogs" method="GET">
+                <button type="submit" class="btn btn-primary px-4 my-5">Create a blog</button>
+            </form>
+        <% } else { %>
+            <div class="blog-content">
+                <ul>
+                    <% blogs.forEach((blog, index) => { %>   
+                        <li>       
+                            <form action="/blogs/<%= index %>?_method=DELETE" method="POST">
+                                <%= blog.author %>
+                                <%= blog.text %>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button class="btn btn-secondary">Delete</button>
+                            </form>
+                        </li>       
+                    <% }) %>          
+                </ul>
+            </div>
+            <form action="/blogs" method="GET">
+                <button type="submit" class="btn btn-secondary px-4 my-5" style="font-size: 15px;">Create a blog</button>
+            </form>  
+        <% } %>
+        
+    </div>
+<%- include("partials/footer.ejs") %>

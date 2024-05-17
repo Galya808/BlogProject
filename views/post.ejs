@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+<div class="mid-container">
+    <form action="/blogs" method="POST">
+        <label for="author">Author Name:</label>
+        <input type="text" name="author" class="author-name" placeholder="Author name" required>
+        <textarea name="text" class="blog-text" placeholder="Your blog" required></textarea>
+        <input class="btn btn-primary my-5 px-4" type="submit" value="Post the blog">
+    </form>
+</div>
+<%- include("partials/footer.ejs") %>

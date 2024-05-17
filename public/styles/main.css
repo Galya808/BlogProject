@@ -1,0 +1,48 @@
+.header-text, h3 {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+}
+
+.header-text {
+    margin-top: 120px;
+}
+
+.top-container {
+    height: 45vh;
+}
+
+.mid-container {
+    height: 60vh;
+}
+
+.mid-container {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.blog-text {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.author-name {
+    margin-top: 30px;
+    width: 84.4%;
+}
+
+.blog-content {
+    display: block;
+    margin-left: 400px;
+    width: 50%;
+}
+
+.btn-secondary {
+    font-size: x-small;
+    padding-top: 5px;
+}
